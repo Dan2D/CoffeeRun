@@ -1,0 +1,37 @@
+#rangeval{
+    visibility: hidden;
+    position: relative;
+    margin-left: 29.5%;
+    font-weight: bold;
+    margin: 2px 0 5px 0;
+    width: 25px;
+    background: rgba(0,0,0,0.7);
+    text-align: center;
+    border-radius: 5px;
+}
+
+option{
+    font-weight:bold;
+}
+
+option[value=""]{
+    background:rgb(192, 192, 192);
+    color:rgb(255, 255, 255);
+}
+option[value="vanilla"]{
+    background:rgb(255, 254, 208);
+    color: rgb(165, 132, 72);
+}
+option[value="almond"]{
+    background: rgb(179, 146, 87);
+    color: rgb(66, 49, 24)
+}
+option[value="caramel"]{
+    background: rgb(171, 115, 64);
+    color: rgb(255, 215, 142);
+}
+option[value="mocha"]{
+    background:rgb(66, 49, 24);
+    color: rgb(187, 166, 134);
+
+}
