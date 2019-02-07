@@ -16,13 +16,15 @@
 
 
     formHandler.addSliderHandler();
-    checkList.addClickHandler(myTruck.deliverOrder.bind(myTruck));//When user clicks cbox it also fires the deliverOrder method with instance of myTruck
-    // checkList.addDblClickHandler(myTruck.db);
+    checkList.addClickHandler(myTruck.deliverOrder.bind(myTruck), myTruck.db);  //When user clicks cbox it also fires the deliverOrder method with instance of myTruck
+
+  
+       
 
     // formHandler.addSubmitHandler(myTruck.createOrder.bind(myTruck)); //Auto adding submit handler, it can access the method bc it created the object from FormHandler
     console.log(formHandler);                                        //passing our handler to our truck module and creating the order with the instance of our truck
                                                                     // using the bind method and passing the creat order all of our data from the form
-    formHandler.addSubmitHandler(function(data){
+    formHandler.addSubmitHandler(function(data){   //Get data object from the formHandler
         myTruck.createOrder.call(myTruck, data);
         checkList.addRow.call(checkList, data);
     })
