@@ -46,6 +46,8 @@
                     $('input[value="'+order.size+'"]').prop("checked", true);
                     $("#flavorShot").val(order.flavor);
                     $("#strengthLevel").val(order.strength);
+
+                    $('input[value="'+email+'"]').parent().css("color", "rgb(214,214,214)");
                     click=0;
                 }
             }.bind(this)); //addClickHandler is binding the context object of the event handler function
@@ -94,6 +96,7 @@
             //Checks if checkbox exists, if it does changes text content
             if ($('input[value="'+coffeeOrder.emailAddress+'"]').length) {
                 $('input[value="'+coffeeOrder.emailAddress+'"]').parent().contents().last()[0].textContent = description;
+                $('input[value="'+coffeeOrder.emailAddress+'"]').parent().css("color", "black")
 
             }
             else{
